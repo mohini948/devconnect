@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevConnect - Professional Developer Network</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-code me-2"></i>DevConnect
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-page="home">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feed" data-page="feed">
+                            <i class="fas fa-newspaper me-1"></i>Feed
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#network" data-page="network">
+                            <i class="fas fa-users me-1"></i>Network
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jobs" data-page="jobs">
+                            <i class="fas fa-briefcase me-1"></i>Jobs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile" data-page="profile">
+                            <i class="fas fa-user me-1"></i>Profile
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
+                            <img src="https://pixabay.com/get/ge5958a800ecea9fbfba64c7cd00941443367bb49f1d3557b1821a12a7db461d5b71b4a33d2f8ad725129ab899b968ccb7cd56a13988184f3bdfe55b15ffdc27d_1280.jpg" alt="Profile" class="rounded-circle me-2" width="32" height="32">
+                            <span>Alex Johnson</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#profile" data-page="profile"><i class="fas fa-user me-2"></i>View Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        
+        <!-- Home Page -->
+        <div id="home-page" class="page-content active">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="container">
+                    <div class="row align-items-center min-vh-100">
+                        <div class="col-lg-6">
+                            <div class="hero-content">
+                                <h1 class="display-4 fw-bold text-white mb-4">
+                                    Connect with <span class="text-warning">Developers</span> Worldwide
+                                </h1>
+                                <p class="lead text-white-50 mb-4">
+                                    Join the premier professional network for developers. Share your projects, find opportunities, and grow your career in tech.
+                                </p>
+                                <div class="hero-buttons">
+                                    <button class="btn btn-warning btn-lg me-3" onclick="showPage('profile')">
+                                        <i class="fas fa-user-plus me-2"></i>Join Now
+                                    </button>
+                                    <button class="btn btn-outline-light btn-lg" onclick="showPage('feed')">
+                                        <i class="fas fa-arrow-right me-2"></i>Explore Feed
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hero-image">
+                                <img src="https://pixabay.com/get/gb91699094d5e86434ae26f25de87e68cef9fcfbbfc5dcf3c7dd09e7238ca3e1539a86d278d2a3fa1bc7d62f733b017932af66c2d1bda99591af6ef9056c746a7_1280.jpg" alt="Professional Developers" class="img-fluid rounded-lg shadow-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section py-5">
+                <div class="container">
+                    <div class="row text-center mb-5">
+                        <div class="col-lg-8 mx-auto">
+                            <h2 class="display-5 fw-bold mb-3">Why Choose DevConnect?</h2>
+                            <p class="lead text-muted">Connect, collaborate, and advance your developer career with tools built specifically for the tech community.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="feature-card text-center p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-code fa-3x text-primary"></i>
+                                </div>
+                                <h4>Showcase Your Code</h4>
+                                <p class="text-muted">Share your projects, repositories, and technical achievements with the developer community.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card text-center p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-users fa-3x text-primary"></i>
+                                </div>
+                                <h4>Tech Networking</h4>
+                                <p class="text-muted">Connect with developers, tech leads, and industry professionals from around the world.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card text-center p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="fas fa-rocket fa-3x text-primary"></i>
+                                </div>
+                                <h4>Career Growth</h4>
+                                <p class="text-muted">Discover opportunities, get mentorship, and advance your career in technology.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Feed Page -->
+        <div id="feed-page" class="page-content">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!-- Create Post Card -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <img src="https://pixabay.com/get/ge5958a800ecea9fbfba64c7cd00941443367bb49f1d3557b1821a12a7db461d5b71b4a33d2f8ad725129ab899b968ccb7cd56a13988184f3bdfe55b15ffdc27d_1280.jpg" alt="Profile" class="rounded-circle me-3" width="48" height="48">
+                                    <div class="flex-grow-1">
+                                        <textarea class="form-control border-0" placeholder="Share your latest project or tech insight..." rows="3"></textarea>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <div class="post-options">
+                                                <button class="btn btn-outline-primary btn-sm me-2">
+                                                    <i class="fas fa-image me-1"></i>Photo
+                                                </button>
+                                                <button class="btn btn-outline-success btn-sm me-2">
+                                                    <i class="fab fa-github me-1"></i>Repository
+                                                </button>
+                                                <button class="btn btn-outline-info btn-sm">
+                                                    <i class="fas fa-poll me-1"></i>Poll
+                                                </button>
+                                            </div>
+                                            <button class="btn btn-primary">Post</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feed Posts -->
+                        <div class="feed-posts">
+                            <!-- Post 1 -->
+                            <div class="card mb-4 post-card">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <img src="https://pixabay.com/get/gc3cd800f44947064b41028ac4d1f6acbdf6ddf6f72e9505598f4552a53608b14fcd9b19a72280e4cfab6e4663063b1aa0c17d7f03ad945e429b07557bc149960_1280.jpg" alt="Sarah Chen" class="rounded-circle me-3" width="48" height="48">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">Sarah Chen</h6>
+                                            <small class="text-muted">Senior Full Stack Developer • 2h</small>
+                                        </div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm" data-bs-toggle="dropdown">
+                                                <i class="fas fa-ellipsis-h"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Save post</a></li>
+                                                <li><a class="dropdown-item" href="#">Report</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <p class="mb-3">Just shipped a new React component library that reduces development time by 40%! 🚀 Built with TypeScript and includes comprehensive testing. Check it out and let me know your thoughts!</p>
+                                    <div class="post-image mb-3">
+                                        <img src="https://pixabay.com/get/g1580a19c98f3ef5d8b92bfac47754d32fc98ed292436061ee9c585d9d7c391f7bb897969dac90e1f2e70ff0ebf2c16b601afe30a99fb9d751c461f6b1a197bfa_1280.jpg" alt="Code workspace" class="img-fluid rounded">
+                                    </div>
+                                    <div class="post-actions d-flex justify-content-between align-items-center">
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary me-2 like-btn" onclick="toggleLike(this)">
+                                                <i class="far fa-thumbs-up me-1"></i>Like <span class="like-count">24</span>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary me-2">
+                                                <i class="far fa-comment me-1"></i>Comment
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-success">
+                                                <i class="fas fa-share me-1"></i>Share
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 2 -->
+                            <div class="card mb-4 post-card">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <img src="https://pixabay.com/get/g5ac36fcdfe1be9ac31826191f9ac3347a958a2d3758d980f55d42c8b74bc52ce80ff352e108dd5f70a62cef8cf0dfc371b9118202604a4667f6b2a4cbc5db671_1280.jpg" alt="Mike Rodriguez" class="rounded-circle me-3" width="48" height="48">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">Mike Rodriguez</h6>
+                                            <small class="text-muted">DevOps Engineer • 4h</small>
+                                        </div>
+                                    </div>
+                                    <p class="mb-3">Attended an amazing tech networking event today! Met some incredible developers working on cutting-edge AI projects. The future of tech is bright! 💡</p>
+                                    <div class="post-image mb-3">
+                                        <img src="https://pixabay.com/get/gcfa72c35d5f917a2abee5b2ade943164b0692e5c37b62abf2cd7ce17e839a53b275a169bbd621ee446df943e433f43855eee5a67dd0026e7064180c9b567e1f7_1280.jpg" alt="Networking event" class="img-fluid rounded">
+                                    </div>
+                                    <div class="post-actions d-flex justify-content-between align-items-center">
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary me-2 like-btn" onclick="toggleLike(this)">
+                                                <i class="far fa-thumbs-up me-1"></i>Like <span class="like-count">18</span>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary me-2">
+                                                <i class="far fa-comment me-1"></i>Comment
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-success">
+                                                <i class="fas fa-share me-1"></i>Share
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 3 -->
+                            <div class="card mb-4 post-card">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <img src="https://pixabay.com/get/g65dab466467d991d66a68bbb86c7542de92a75cce82b9a024753a9b2bb3e995cbd54f330e2113007072aeb28c3a84cf5170ae09e7cff79a6ff707f2ec47ccbed_1280.png" alt="Alex Thompson" class="rounded-circle me-3" width="48" height="48">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">Alex Thompson</h6>
+                                            <small class="text-muted">Mobile App Developer • 6h</small>
+                                        </div>
+                                    </div>
+                                    <p class="mb-3">💡 Pro tip: Always write unit tests before refactoring legacy code. Just saved myself hours of debugging! What's your best coding practice?</p>
+                                    <div class="post-actions d-flex justify-content-between align-items-center">
+                                        <div class="action-buttons">
+                                            <button class="btn btn-sm btn-outline-primary me-2 like-btn" onclick="toggleLike(this)">
+                                                <i class="far fa-thumbs-up me-1"></i>Like <span class="like-count">42</span>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary me-2">
+                                                <i class="far fa-comment me-1"></i>Comment
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-success">
+                                                <i class="fas fa-share me-1"></i>Share
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Trending Topics -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h6 class="mb-0">Trending in Tech</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="trending-topic mb-3">
+                                    <small class="text-muted">#1 Trending</small>
+                                    <h6 class="mb-1">React 18</h6>
+                                    <small class="text-muted">2,847 developers talking</small>
+                                </div>
+                                <div class="trending-topic mb-3">
+                                    <small class="text-muted">#2 Trending</small>
+                                    <h6 class="mb-1">AI/ML Engineering</h6>
+                                    <small class="text-muted">1,923 developers talking</small>
+                                </div>
+                                <div class="trending-topic">
+                                    <small class="text-muted">#3 Trending</small>
+                                    <h6 class="mb-1">Remote Work</h6>
+                                    <small class="text-muted">1,456 developers talking</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Suggested Connections -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">People You May Know</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="suggestion-item d-flex align-items-center mb-3">
+                                    <img src="https://pixabay.com/get/ga52dfaf673df3fc947ffbe89e89936d5c2116e0c26d594fbe89231c81c2096c03c6b2115da129c225cc22953a500f3b98d08afb2f6936be3cd0760e3ad4c6d90_1280.jpg" alt="Developer" class="rounded-circle me-3" width="40" height="40">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0 small">Emma Wilson</h6>
+                                        <small class="text-muted">Frontend Developer</small>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary">Connect</button>
+                                </div>
+                                <div class="suggestion-item d-flex align-items-center">
+                                    <img src="https://pixabay.com/get/gcc99589a216401868dcfa91caec62fbf51732303c75918e0b075b1897b27e9f3b81fef3133ed41b47a0bb72339e4edcff6866203c858e314e4aaccb61e415df6_1280.jpg" alt="Developer" class="rounded-circle me-3" width="40" height="40">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0 small">David Kim</h6>
+                                        <small class="text-muted">Backend Engineer</small>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary">Connect</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Network Page -->
+        <div id="network-page" class="page-content">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h3>My Network</h3>
+                            <div class="network-stats">
+                                <span class="badge bg-primary fs-6">245 Connections</span>
+                            </div>
+                        </div>
+
+                        <!-- Network Tabs -->
+                        <ul class="nav nav-tabs mb-4" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#connections">Connections</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#invitations">Invitations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#suggestions">Suggestions</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <!-- Connections Tab -->
+                            <div class="tab-pane fade show active" id="connections">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="connection-card">
+                                            <img src="https://pixabay.com/get/gc3cd800f44947064b41028ac4d1f6acbdf6ddf6f72e9505598f4552a53608b14fcd9b19a72280e4cfab6e4663063b1aa0c17d7f03ad945e429b07557bc149960_1280.jpg" alt="Sarah Chen" class="connection-avatar">
+                                            <div class="connection-info">
+                                                <h6>Sarah Chen</h6>
+                                                <p class="text-muted small">Senior Full Stack Developer at TechCorp</p>
+                                                <div class="connection-skills">
+                                                    <span class="badge bg-light text-dark">React</span>
+                                                    <span class="badge bg-light text-dark">Node.js</span>
+                                                    <span class="badge bg-light text-dark">TypeScript</span>
+                                                </div>
+                                                <button class="btn btn-outline-primary btn-sm mt-2">Message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="connection-card">
+                                            <img src="https://pixabay.com/get/g5ac36fcdfe1be9ac31826191f9ac3347a958a2d3758d980f55d42c8b74bc52ce80ff352e108dd5f70a62cef8cf0dfc371b9118202604a4667f6b2a4cbc5db671_1280.jpg" alt="Mike Rodriguez" class="connection-avatar">
+                                            <div class="connection-info">
+                                                <h6>Mike Rodriguez</h6>
+                                                <p class="text-muted small">DevOps Engineer at CloudTech</p>
+                                                <div class="connection-skills">
+                                                    <span class="badge bg-light text-dark">AWS</span>
+                                                    <span class="badge bg-light text-dark">Docker</span>
+                                                    <span class="badge bg-light text-dark">Kubernetes</span>
+                                                </div>
+                                                <button class="btn btn-outline-primary btn-sm mt-2">Message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="connection-card">
+                                            <img src="https://pixabay.com/get/g65dab466467d991d66a68bbb86c7542de92a75cce82b9a024753a9b2bb3e995cbd54f330e2113007072aeb28c3a84cf5170ae09e7cff79a6ff707f2ec47ccbed_1280.png" alt="Alex Thompson" class="connection-avatar">
+                                            <div class="connection-info">
+                                                <h6>Alex Thompson</h6>
+                                                <p class="text-muted small">Mobile App Developer at AppStudio</p>
+                                                <div class="connection-skills">
+                                                    <span class="badge bg-light text-dark">React Native</span>
+                                                    <span class="badge bg-light text-dark">Flutter</span>
+                                                    <span class="badge bg-light text-dark">Swift</span>
+                                                </div>
+                                                <button class="btn btn-outline-primary btn-sm mt-2">Message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="connection-card">
+                                            <img src="https://pixabay.com/get/ga52dfaf673df3fc947ffbe89e89936d5c2116e0c26d594fbe89231c81c2096c03c6b2115da129c225cc22953a500f3b98d08afb2f6936be3cd0760e3ad4c6d90_1280.jpg" alt="Emma Wilson" class="connection-avatar">
+                                            <div class="connection-info">
+                                                <h6>Emma Wilson</h6>
+                                                <p class="text-muted small">Frontend Developer at WebFlow</p>
+                                                <div class="connection-skills">
+                                                    <span class="badge bg-light text-dark">Vue.js</span>
+                                                    <span class="badge bg-light text-dark">CSS</span>
+                                                    <span class="badge bg-light text-dark">JavaScript</span>
+                                                </div>
+                                                <button class="btn btn-outline-primary btn-sm mt-2">Message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Invitations Tab -->
+                            <div class="tab-pane fade" id="invitations">
+                                <div class="text-center py-5">
+                                    <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                                    <h5>No pending invitations</h5>
+                                    <p class="text-muted">When someone sends you a connection request, it will appear here.</p>
+                                </div>
+                            </div>
+
+                            <!-- Suggestions Tab -->
+                            <div class="tab-pane fade" id="suggestions">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="connection-card">
+                                            <img src="https://pixabay.com/get/gcc99589a216401868dcfa91caec62fbf51732303c75918e0b075b1897b27e9f3b81fef3133ed41b47a0bb72339e4edcff6866203c858e314e4aaccb61e415df6_1280.jpg" alt="David Kim" class="connection-avatar">
+                                            <div class="connection-info">
+                                                <h6>David Kim</h6>
+                                                <p class="text-muted small">Backend Engineer at DataFlow</p>
+                                                <div class="connection-skills">
+                                                    <span class="badge bg-light text-dark">Python</span>
+                                                    <span class="badge bg-light text-dark">Django</span>
+                                                    <span class="badge bg-light text-dark">PostgreSQL</span>
+                                                </div>
+                                                <button class="btn btn-primary btn-sm mt-2">Connect</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="connection-card">
+                                            <img src="https://pixabay.com/get/gc00c2155633e458cefddd4b3843301af2ef2ad1bd3208a7c1a4c82dc81739935966722a759edf169f0dfb7716a8b50effebb98e952ee0554f4e5de61addc2cd1_1280.jpg" alt="Lisa Zhang" class="connection-avatar">
+                                            <div class="connection-info">
+                                                <h6>Lisa Zhang</h6>
+                                                <p class="text-muted small">UI/UX Designer at DesignHub</p>
+                                                <div class="connection-skills">
+                                                    <span class="badge bg-light text-dark">Figma</span>
+                                                    <span class="badge bg-light text-dark">Adobe XD</span>
+                                                    <span class="badge bg-light text-dark">Prototyping</span>
+                                                </div>
+                                                <button class="btn btn-primary btn-sm mt-2">Connect</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h6 class="mb-0">Network Growth</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="network-stat mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span>This week</span>
+                                        <span class="text-success">+12 connections</span>
+                                    </div>
+                                </div>
+                                <div class="network-stat mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span>This month</span>
+                                        <span class="text-success">+38 connections</span>
+                                    </div>
+                                </div>
+                                <div class="network-stat">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Profile views</span>
+                                        <span class="text-primary">156 this week</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Networking Events</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="event-item mb-3">
+                                    <img src="https://pixabay.com/get/gae5c923cbcf4620380c2af2672d444ae9e4cf65335bcacb07143c3d80302b16448c3bcaa2675c75217c08c232676f5bb232ffe08a5ab493eb51099ed7d6401c1_1280.jpg" alt="Tech meetup" class="img-fluid rounded mb-2">
+                                    <h6 class="small">React Developer Meetup</h6>
+                                    <small class="text-muted">Dec 15, 2023 • Virtual</small>
+                                </div>
+                                <div class="event-item">
+                                    <img src="https://pixabay.com/get/g28c3ef2d5749e2b2527465c2486fbdc44a24f8dbedf1d25eb4a34cef442dd81dcf3608e3cac210e3dc0d4986a21f27733ee06233666bdb64443bc5483351ef99_1280.jpg" alt="Conference" class="img-fluid rounded mb-2">
+                                    <h6 class="small">DevOps Conference 2024</h6>
+                                    <small class="text-muted">Jan 20, 2024 • San Francisco</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jobs Page -->
+        <div id="jobs-page" class="page-content">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h3>Job Opportunities</h3>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-bell me-2"></i>Job Alerts
+                            </button>
+                        </div>
+
+                        <!-- Job Filters -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-3">
+                                        <select class="form-select">
+                                            <option>All Locations</option>
+                                            <option>Remote</option>
+                                            <option>San Francisco</option>
+                                            <option>New York</option>
+                                            <option>London</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select class="form-select">
+                                            <option>All Experience</option>
+                                            <option>Entry Level</option>
+                                            <option>Mid Level</option>
+                                            <option>Senior Level</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select class="form-select">
+                                            <option>All Job Types</option>
+                                            <option>Full-time</option>
+                                            <option>Part-time</option>
+                                            <option>Contract</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control" placeholder="Search skills...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Job Listings -->
+                        <div class="job-listings">
+                            <!-- Job 1 -->
+                            <div class="card mb-4 job-card">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <div class="company-logo me-3">
+                                            <div class="bg-primary rounded d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                                <i class="fas fa-building text-white fa-2x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="mb-1">Senior React Developer</h5>
+                                            <h6 class="text-primary mb-1">TechFlow Inc.</h6>
+                                            <div class="job-meta">
+                                                <span class="badge bg-light text-dark me-2">
+                                                    <i class="fas fa-map-marker-alt me-1"></i>San Francisco, CA
+                                                </span>
+                                                <span class="badge bg-light text-dark me-2">
+                                                    <i class="fas fa-clock me-1"></i>Full-time
+                                                </span>
+                                                <span class="badge bg-success">
+                                                    <i class="fas fa-home me-1"></i>Remote OK
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="job-actions">
+                                            <button class="btn btn-outline-primary btn-sm me-2">Save</button>
+                                            <button class="btn btn-primary btn-sm">Apply</button>
+                                        </div>
+                                    </div>
+                                    <p class="text-muted mb-3">We're looking for a passionate React developer to join our frontend team. You'll work on cutting-edge web applications and collaborate with cross-functional teams...</p>
+                                    <div class="job-skills">
+                                        <span class="badge bg-light text-dark me-2">React</span>
+                                        <span class="badge bg-light text-dark me-2">TypeScript</span>
+                                        <span class="badge bg-light text-dark me-2">Redux</span>
+                                        <span class="badge bg-light text-dark me-2">GraphQL</span>
+                                        <span class="badge bg-light text-dark">Jest</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <small class="text-muted">Posted 2 days ago</small>
+                                        <small class="text-success fw-bold">$120k - $160k</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Job 2 -->
+                            <div class="card mb-4 job-card">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <div class="company-logo me-3">
+                                            <div class="bg-success rounded d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                                <i class="fas fa-rocket text-white fa-2x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="mb-1">DevOps Engineer</h5>
+                                            <h6 class="text-success mb-1">CloudScale Solutions</h6>
+                                            <div class="job-meta">
+                                                <span class="badge bg-light text-dark me-2">
+                                                    <i class="fas fa-map-marker-alt me-1"></i>Remote
+                                                </span>
+                                                <span class="badge bg-light text-dark me-2">
+                                                    <i class="fas fa-clock me-1"></i>Full-time
+                                                </span>
+                                                <span class="badge bg-warning">
+                                                    <i class="fas fa-star me-1"></i>Featured
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="job-actions">
+                                            <button class="btn btn-outline-primary btn-sm me-2">Save</button>
+                                            <button class="btn btn-primary btn-sm">Apply</button>
+                                        </div>
+                                    </div>
+                                    <p class="text-muted mb-3">Join our DevOps team to build and maintain scalable cloud infrastructure. Experience with AWS, Docker, and Kubernetes required...</p>
+                                    <div class="job-skills">
+                                        <span class="badge bg-light text-dark me-2">AWS</span>
+                                        <span class="badge bg-light text-dark me-2">Docker</span>
+                                        <span class="badge bg-light text-dark me-2">Kubernetes</span>
+                                        <span class="badge bg-light text-dark me-2">Terraform</span>
+                                        <span class="badge bg-light text-dark">CI/CD</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <small class="text-muted">Posted 1 day ago</small>
+                                        <small class="text-success fw-bold">$130k - $170k</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Job 3 -->
+                            <div class="card mb-4 job-card">
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <div class="company-logo me-3">
+                                            <div class="bg-info rounded d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                                <i class="fas fa-mobile-alt text-white fa-2x"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="mb-1">Mobile App Developer</h5>
+                                            <h6 class="text-info mb-1">AppCraft Studio</h6>
+                                            <div class="job-meta">
+                                                <span class="badge bg-light text-dark me-2">
+                                                    <i class="fas fa-map-marker-alt me-1"></i>New York, NY
+                                                </span>
+                                                <span class="badge bg-light text-dark me-2">
+                                                    <i class="fas fa-clock me-1"></i>Full-time
+                                                </span>
+                                                <span class="badge bg-light text-dark">
+                                                    <i class="fas fa-users me-1"></i>Team Lead
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="job-actions">
+                                            <button class="btn btn-outline-primary btn-sm me-2">Save</button>
+                                            <button class="btn btn-primary btn-sm">Apply</button>
+                                        </div>
+                                    </div>
+                                    <p class="text-muted mb-3">Lead a team of mobile developers building next-generation iOS and Android applications. Experience with React Native and native development...</p>
+                                    <div class="job-skills">
+                                        <span class="badge bg-light text-dark me-2">React Native</span>
+                                        <span class="badge bg-light text-dark me-2">iOS</span>
+                                        <span class="badge bg-light text-dark me-2">Android</span>
+                                        <span class="badge bg-light text-dark me-2">Flutter</span>
+                                        <span class="badge bg-light text-dark">Leadership</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <small class="text-muted">Posted 3 days ago</small>
+                                        <small class="text-success fw-bold">$140k - $180k</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h6 class="mb-0">Job Search Tips</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="tip-item mb-3">
+                                    <i class="fas fa-lightbulb text-warning me-2"></i>
+                                    <small>Update your profile with latest skills and projects</small>
+                                </div>
+                                <div class="tip-item mb-3">
+                                    <i class="fas fa-lightbulb text-warning me-2"></i>
+                                    <small>Set up job alerts for your preferred roles</small>
+                                </div>
+                                <div class="tip-item">
+                                    <i class="fas fa-lightbulb text-warning me-2"></i>
+                                    <small>Connect with recruiters in your field</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Salary Insights</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="salary-insight mb-3">
+                                    <h6 class="small">Frontend Developer</h6>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-muted">Average</small>
+                                        <small class="fw-bold">$95k</small>
+                                    </div>
+                                </div>
+                                <div class="salary-insight mb-3">
+                                    <h6 class="small">Backend Developer</h6>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-muted">Average</small>
+                                        <small class="fw-bold">$105k</small>
+                                    </div>
+                                </div>
+                                <div class="salary-insight">
+                                    <h6 class="small">Full Stack Developer</h6>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-muted">Average</small>
+                                        <small class="fw-bold">$115k</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Page -->
+        <div id="profile-page" class="page-content">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!-- Profile Header -->
+                        <div class="card mb-4">
+                            <div class="profile-cover">
+                                <img src="https://pixabay.com/get/gb3ea48719b1b5fad57d8fad412cdd94678559f2fc7d908b9b760dd2dbd218d7c194558c5283911987c83c6793f1505f04aff4bb2e2470c803b47dc119ec7ce26_1280.jpg" alt="Cover" class="cover-image">
+                            </div>
+                            <div class="card-body">
+                                <div class="profile-header-content">
+                                    <div class="profile-avatar">
+                                        <img src="https://pixabay.com/get/ge5958a800ecea9fbfba64c7cd00941443367bb49f1d3557b1821a12a7db461d5b71b4a33d2f8ad725129ab899b968ccb7cd56a13988184f3bdfe55b15ffdc27d_1280.jpg" alt="Alex Johnson" class="rounded-circle">
+                                    </div>
+                                    <div class="profile-info">
+                                        <h3 class="mb-1">Alex Johnson</h3>
+                                        <h5 class="text-primary mb-2">Senior Full Stack Developer</h5>
+                                        <p class="text-muted mb-3">San Francisco Bay Area • 245 connections</p>
+                                        <p class="mb-3">Passionate full-stack developer with 8+ years of experience building scalable web applications. Specialized in React, Node.js, and cloud technologies. Always excited to work on innovative projects that make a real impact.</p>
+                                        <div class="profile-actions">
+                                            <button class="btn btn-primary me-2">
+                                                <i class="fas fa-envelope me-2"></i>Message
+                                            </button>
+                                            <button class="btn btn-outline-primary me-2">
+                                                <i class="fas fa-user-plus me-2"></i>Connect
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="fas fa-share me-2"></i>Share Profile
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience Section -->
+                        <div class="card mb-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Experience</h5>
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-plus me-1"></i>Add
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="experience-item">
+                                    <div class="d-flex">
+                                        <div class="company-logo me-3">
+                                            <div class="bg-primary rounded d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                                                <i class="fas fa-building text-white"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Senior Full Stack Developer</h6>
+                                            <h6 class="text-primary mb-1">TechFlow Inc.</h6>
+                                            <small class="text-muted">Jan 2022 - Present • 2 yrs</small>
+                                            <p class="mt-2 mb-0">Leading development of microservices architecture and React-based dashboard applications. Mentoring junior developers and implementing best practices for code quality and performance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="experience-item">
+                                    <div class="d-flex">
+                                        <div class="company-logo me-3">
+                                            <div class="bg-success rounded d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                                                <i class="fas fa-rocket text-white"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Frontend Developer</h6>
+                                            <h6 class="text-success mb-1">StartupXYZ</h6>
+                                            <small class="text-muted">Mar 2019 - Dec 2021 • 2 yrs 10 mos</small>
+                                            <p class="mt-2 mb-0">Built responsive web applications using React and Redux. Collaborated with design team to implement pixel-perfect UI components and optimize user experience.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skills Section -->
+                        <div class="card mb-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Skills</h5>
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-plus me-1"></i>Add
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <h6>JavaScript</h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="progress flex-grow-1 me-3">
+                                                <div class="progress-bar" style="width: 95%"></div>
+                                            </div>
+                                            <small class="text-muted">Expert</small>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h6>React</h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="progress flex-grow-1 me-3">
+                                                <div class="progress-bar" style="width: 92%"></div>
+                                            </div>
+                                            <small class="text-muted">Expert</small>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h6>Node.js</h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="progress flex-grow-1 me-3">
+                                                <div class="progress-bar" style="width: 88%"></div>
+                                            </div>
+                                            <small class="text-muted">Advanced</small>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h6>Python</h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="progress flex-grow-1 me-3">
+                                                <div class="progress-bar" style="width: 85%"></div>
+                                            </div>
+                                            <small class="text-muted">Advanced</small>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h6>AWS</h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="progress flex-grow-1 me-3">
+                                                <div class="progress-bar" style="width: 80%"></div>
+                                            </div>
+                                            <small class="text-muted">Advanced</small>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <h6>Docker</h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="progress flex-grow-1 me-3">
+                                                <div class="progress-bar" style="width: 75%"></div>
+                                            </div>
+                                            <small class="text-muted">Intermediate</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projects Section -->
+                        <div class="card mb-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Featured Projects</h5>
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-plus me-1"></i>Add
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="project-item mb-4">
+                                    <div class="d-flex">
+                                        <img src="https://pixabay.com/get/g44bec32ba8eb72a51e81746900820e1ee8c9bd7c0d3d5e93b59d227b04f0b5c62582904cf6ef42cf54a38216bae431895bf16b794729f7ebc2d729d96f9ac373_1280.jpg" alt="Project" class="project-image me-3">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">E-Commerce Platform</h6>
+                                            <p class="text-muted mb-2">Full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.</p>
+                                            <div class="project-tech mb-2">
+                                                <span class="badge bg-light text-dark me-1">React</span>
+                                                <span class="badge bg-light text-dark me-1">Node.js</span>
+                                                <span class="badge bg-light text-dark me-1">MongoDB</span>
+                                                <span class="badge bg-light text-dark">Stripe</span>
+                                            </div>
+                                            <div class="project-links">
+                                                <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                                    <i class="fab fa-github me-1"></i>GitHub
+                                                </a>
+                                                <a href="#" class="btn btn-outline-success btn-sm">
+                                                    <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-item">
+                                    <div class="d-flex">
+                                        <img src="https://pixabay.com/get/g5f39f1db7c4dfc80d491ab9e728b2de911c3d3a18f62460a62964c95464eb0f1534d7bbb334017d696430a8fbf40f8b7e2e91b18a0de62681c36cadc6de88597_1280.jpg" alt="Project" class="project-image me-3">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Task Management App</h6>
+                                            <p class="text-muted mb-2">React-based task management application with real-time collaboration features. Includes drag-and-drop functionality and team workspaces.</p>
+                                            <div class="project-tech mb-2">
+                                                <span class="badge bg-light text-dark me-1">React</span>
+                                                <span class="badge bg-light text-dark me-1">Socket.io</span>
+                                                <span class="badge bg-light text-dark me-1">Express</span>
+                                                <span class="badge bg-light text-dark">PostgreSQL</span>
+                                            </div>
+                                            <div class="project-links">
+                                                <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                                    <i class="fab fa-github me-1"></i>GitHub
+                                                </a>
+                                                <a href="#" class="btn btn-outline-success btn-sm">
+                                                    <i class="fas fa-external-link-alt me-1"></i>Live Demo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Profile Strength -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h6 class="mb-0">Profile Strength</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="progress flex-grow-1 me-3">
+                                        <div class="progress-bar bg-success" style="width: 85%"></div>
+                                    </div>
+                                    <span class="fw-bold">85%</span>
+                                </div>
+                                <div class="profile-suggestions">
+                                    <div class="suggestion mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <small>Profile photo added</small>
+                                    </div>
+                                    <div class="suggestion mb-2">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <small>Work experience added</small>
+                                    </div>
+                                    <div class="suggestion mb-2">
+                                        <i class="fas fa-circle text-muted me-2"></i>
+                                        <small>Add 2 more skills</small>
+                                    </div>
+                                    <div class="suggestion">
+                                        <i class="fas fa-circle text-muted me-2"></i>
+                                        <small>Get 3 recommendations</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h6 class="mb-0">Recent Activity</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="activity-item mb-3">
+                                    <small class="text-muted">2 days ago</small>
+                                    <p class="small mb-0">Posted about React best practices</p>
+                                </div>
+                                <div class="activity-item mb-3">
+                                    <small class="text-muted">1 week ago</small>
+                                    <p class="small mb-0">Updated work experience</p>
+                                </div>
+                                <div class="activity-item">
+                                    <small class="text-muted">2 weeks ago</small>
+                                    <p class="small mb-0">Connected with Sarah Chen</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="mb-0">Contact Info</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="contact-item mb-2">
+                                    <i class="fas fa-envelope text-muted me-2"></i>
+                                    <small>alex.johnson@email.com</small>
+                                </div>
+                                <div class="contact-item mb-2">
+                                    <i class="fab fa-linkedin text-muted me-2"></i>
+                                    <small>linkedin.com/in/alexjohnson</small>
+                                </div>
+                                <div class="contact-item mb-2">
+                                    <i class="fab fa-github text-muted me-2"></i>
+                                    <small>github.com/alexjohnson</small>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-globe text-muted me-2"></i>
+                                    <small>alexjohnson.dev</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

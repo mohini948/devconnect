@@ -1,0 +1,481 @@
+/* DevConnect Custom Styles */
+
+:root {
+    --primary-color: 210 100% 50%; /* #0066FF */
+    --secondary-color: 210 11% 15%; /* #1A1F2E */
+    --background-color: 210 11% 98%; /* #F5F7FA */
+    --card-background: 0 0% 100%; /* #FFFFFF */
+    --text-primary: 210 11% 15%; /* #1A1F2E */
+    --text-secondary: 210 11% 50%; /* #6B7280 */
+    --border-color: 210 11% 85%; /* #E5E7EB */
+    --success-color: 142 76% 36%; /* #10B981 */
+    --warning-color: 45 93% 58%; /* #F59E0B */
+    --danger-color: 0 84% 60%; /* #EF4444 */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background-color: hsl(var(--background-color));
+    color: hsl(var(--text-primary));
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+.navbar {
+    background: linear-gradient(135deg, hsl(var(--primary-color)), hsl(210 100% 45%)) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 0 0.25rem;
+    padding: 0.5rem 1rem !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+.main-content {
+    padding-top: 76px; /* Account for fixed navbar */
+    min-height: 100vh;
+}
+
+.page-content {
+    display: none;
+}
+
+.page-content.active {
+    display: block;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, hsl(var(--primary-color)), hsl(210 100% 45%));
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image img {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-buttons .btn {
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Features Section */
+.features-section {
+    background-color: hsl(var(--card-background));
+}
+
+.feature-card {
+    background-color: hsl(var(--card-background));
+    border-radius: 16px;
+    border: 1px solid hsl(var(--border-color));
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: hsl(var(--primary-color));
+}
+
+.feature-icon {
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid hsl(var(--border-color));
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    background-color: hsl(var(--card-background));
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background-color: hsl(var(--background-color));
+    border-bottom: 1px solid hsl(var(--border-color));
+    font-weight: 600;
+}
+
+/* Post Styles */
+.post-card {
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.post-actions .btn {
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.like-btn.liked {
+    background-color: hsl(var(--primary-color));
+    color: white;
+    border-color: hsl(var(--primary-color));
+}
+
+.post-image img {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Connection Card Styles */
+.connection-card {
+    background-color: hsl(var(--card-background));
+    border: 1px solid hsl(var(--border-color));
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.connection-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border-color: hsl(var(--primary-color));
+}
+
+.connection-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+    border: 3px solid hsl(var(--border-color));
+}
+
+.connection-skills {
+    margin: 1rem 0;
+}
+
+.connection-skills .badge {
+    margin: 0.25rem;
+}
+
+/* Job Card Styles */
+.job-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.job-card:hover {
+    border-left-color: hsl(var(--primary-color));
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.job-skills .badge {
+    margin: 0.25rem 0.25rem 0.25rem 0;
+}
+
+/* Profile Styles */
+.profile-cover {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-header-content {
+    position: relative;
+    padding-top: 60px;
+}
+
+.profile-avatar {
+    position: absolute;
+    top: -60px;
+    left: 2rem;
+}
+
+.profile-avatar img {
+    width: 120px;
+    height: 120px;
+    border: 4px solid hsl(var(--card-background));
+    object-fit: cover;
+}
+
+.profile-info {
+    margin-left: 160px;
+}
+
+/* Skills Section */
+.skills-grid .skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skills-grid .skill-item h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    background-color: hsl(var(--border-color));
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, hsl(var(--primary-color)), hsl(var(--success-color)));
+    border-radius: 4px;
+}
+
+/* Project Styles */
+.project-item {
+    padding-bottom: 1.5rem;
+}
+
+.project-item:not(:last-child) {
+    border-bottom: 1px solid hsl(var(--border-color));
+    margin-bottom: 1.5rem;
+}
+
+.project-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid hsl(var(--border-color));
+}
+
+.project-tech .badge {
+    margin: 0.25rem 0.25rem 0.25rem 0;
+}
+
+/* Experience Styles */
+.experience-item {
+    padding: 1rem 0;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, hsl(var(--primary-color)), hsl(210 100% 45%));
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, hsl(210 100% 45%), hsl(var(--primary-color)));
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+}
+
+/* Badge Styles */
+.badge {
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+}
+
+/* Trending Topics */
+.trending-topic {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid hsl(var(--border-color));
+}
+
+.trending-topic:last-child {
+    border-bottom: none;
+}
+
+/* Network Stats */
+.network-stat {
+    padding: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    
+    .hero-section .row {
+        min-height: auto !important;
+    }
+    
+    .profile-info {
+        margin-left: 0;
+        margin-top: 1rem;
+        text-align: center;
+    }
+    
+    .profile-avatar {
+        position: static;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .profile-header-content {
+        padding-top: 1rem;
+    }
+    
+    .connection-card {
+        margin-bottom: 1rem;
+    }
+    
+    .project-item .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .project-image {
+        margin: 0 auto 1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem !important;
+    }
+    
+    .feature-card {
+        margin-bottom: 1rem;
+    }
+    
+    .job-card .d-flex {
+        flex-direction: column;
+    }
+    
+    .job-actions {
+        margin-top: 1rem;
+        text-align: center;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(var(--background-color));
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--border-color));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--text-secondary));
+}

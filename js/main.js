@@ -347,10 +347,150 @@ class DevConnectApp {
                 this.autoResizeTextarea(textarea);
             });
         });
+
+        // Initialize auth forms
+        this.initializeAuthForms();
+    }
+
+    initializeAuthForms() {
+        // Login form handling
+        const loginForm = document.getElementById('loginForm');
+        if (loginForm) {
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                this.handleLogin(loginForm);
+            });
+        }
+
+        // Signup form handling
+        const signupForm = document.getElementById('signupForm');
+        if (signupForm) {
+            signupForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                this.handleSignup(signupForm);
+            });
+        }
+
+        // Password confirmation validation
+        const confirmPassword = document.getElementById('confirmPassword');
+        const signupPassword = document.getElementById('signupPassword');
+        
+        if (confirmPassword && signupPassword) {
+            confirmPassword.addEventListener('input', () => {
+                this.validatePasswordMatch(signupPassword.value, confirmPassword.value);
+            });
+        }
+    }
+
+    handleLogin(form) {
+        const formData = new FormData(form);
+        const email = formData.get('loginEmail') || formData.get('email');
+        const password = formData.get('loginPassword') || formData.get('password');
+
+        if (!email || !password) {
+            this.showNotification('Please fill in all required fields', 'error');
+            return;
+        }
+
+        // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Logging in...';
+        submitBtn.disabled = true;
+
+        // Simulate login process
+        setTimeout(() => {
+            // Reset button
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+
+            // Close modal and show success
+            const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+            if (modal) modal.hide();
+            
+            this.showNotification(`Welcome back! Logged in as ${email}`, 'success');
+            
+            // Navigate to feed page
+            setTimeout(() => {
+                showPage('feed');
+            }, 1500);
+        }, 2000);
+    }
+
+    handleSignup(form) {
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        // Validate required fields
+        const requiredFields = ['firstName', 'lastName', 'signupEmail', 'jobTitle', 'experience', 'primarySkills', 'signupPassword', 'confirmPassword'];
+        const missingFields = requiredFields.filter(field => !data[field]);
+
+        if (missingFields.length > 0) {
+            this.showNotification('Please fill in all required fields', 'error');
+            return;
+        }
+
+        // Validate password match
+        if (data.signupPassword !== data.confirmPassword) {
+            this.showNotification('Passwords do not match', 'error');
+            return;
+        }
+
+        // Validate terms agreement
+        if (!data.agreeTerms) {
+            this.showNotification('Please agree to the terms and conditions', 'error');
+            return;
+        }
+
+        // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Creating Account...';
+        submitBtn.disabled = true;
+
+        // Simulate signup process
+        setTimeout(() => {
+            // Reset button
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+
+            // Close modal and show success
+            const modal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
+            if (modal) modal.hide();
+            
+            this.showNotification(`Welcome to DevConnect, ${data.firstName}! Your account has been created.`, 'success');
+            
+            // Navigate to profile page
+            setTimeout(() => {
+                showPage('profile');
+            }, 1500);
+        }, 2500);
+    }
+
+    validatePasswordMatch(password, confirmPassword) {
+        const confirmField = document.getElementById('confirmPassword');
+        
+        if (confirmPassword && password !== confirmPassword) {
+            confirmField.classList.add('is-invalid');
+            if (!confirmField.nextElementSibling || !confirmField.nextElementSibling.classList.contains('invalid-feedback')) {
+                const feedback = document.createElement('div');
+                feedback.className = 'invalid-feedback';
+                feedback.textContent = 'Passwords do not match';
+                confirmField.parentNode.insertBefore(feedback, confirmField.nextSibling);
+            }
+        } else {
+            confirmField.classList.remove('is-invalid');
+            const feedback = confirmField.parentNode.querySelector('.invalid-feedback');
+            if (feedback) feedback.remove();
+        }
     }
 
     handleFormSubmission(form) {
-        // Simulate form submission
+        // Handle other forms (not login/signup)
+        if (form.id === 'loginForm' || form.id === 'signupForm') {
+            return; // These are handled by specific methods
+        }
+
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
         
@@ -605,6 +745,20 @@ function toggleLike(button) {
 function showNotification(message, type = 'info') {
     if (devConnectApp) {
         devConnectApp.showNotification(message, type);
+    }
+}
+
+function togglePassword(passwordFieldId) {
+    const passwordField = document.getElementById(passwordFieldId);
+    const toggleButton = passwordField.parentNode.querySelector('button');
+    const icon = toggleButton.querySelector('i');
+    
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        icon.className = 'fas fa-eye-slash';
+    } else {
+        passwordField.type = 'password';
+        icon.className = 'fas fa-eye';
     }
 }
 
